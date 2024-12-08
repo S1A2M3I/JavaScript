@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Comparison</title>
+    <script src="Team.js" defer></script>
+    <style>
+        div#cont1{
+            width: 70vw;
+            height: 80vh;
+            border: 10px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont1">
+        <form>
+            <h2>Team CSK</h2>
+            <input type="text" id="csk-score">
+            <h2>Team RCB</h2>
+            <input type="text" id="rcb-score" ><br><br>
+            <input type="button" value="Compare" onclick="hello()">
+        </form>
+        <p id="result"></p>
+    </div>
+</body>
+</html>

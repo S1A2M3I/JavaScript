@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#container1{
+            width: 70vw;
+            height: 40vh;
+            border: 10px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <div id="container1">
+        <h1>
+            Grade Card
+        </h1>
+        <div id="box1">
+             <input type="text" class="grd">
+             <input type="button" value="Submit" onclick="hello()">
+             <p id="result"></p>
+        </div>
+    </div>
+    </form>
+    <script>
+        function hello(){
+         const v = document.getElementsByClassName('grd')[0].value;
+         console.log(v);
+        let Grade;
+        if(v >= 90){
+            Grade = "A";
+        }
+        else if(v >= 80){
+            Grade = "B";
+        }
+        else{
+            Grade = "C";
+        }
+        document.getElementById("result").innerHTML = "Your grade is " + Grade;
+        }
+    </script>
+</body>
+</html>
