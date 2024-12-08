@@ -11,3 +11,23 @@ function hello() {
     }
     document.getElementById('result').innerHTML = 'Score: ' + score;
 }
+
+let a = 5;
+a++;
+console.log(a);
+
+let b= 0;
+while (b < 10){
+++b;
+}
+console.log(b);
+
+//reverse of a number
+let c = 123;
+let rev = 0;
+while (c != 0) {
+    let rem = c % 10;
+    rev = rev * 10 + rem;
+    c = parseInt(c / 10);
+}
+console.log(rev);
