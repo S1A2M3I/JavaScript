@@ -216,3 +216,40 @@ while(k<10){
     }
     console.log(k);
 }
+
+
+//Functions 
+function hello(){
+    console.log("Hello World");
+}
+hello();
+
+
+//type of function
+//user defined function
+//anonymous function
+function add(a,b){
+    return a+b;
+}
+console.log(add(10,20));
+
+//anonymous function    
+const sub = function(a,b){
+    return a-b;
+}
+console.log(sub(10,20));
+
+
+//arrow function
+const mul = (a,b) => a*b;
+console.log(mul(10,20));
+
+
+//Function Scope
+function fruitjuice(apple,orange){
+    const juice = `Juice with ${apple} apples and ${orange} oranges.`;
+    return juice;
+}
+let glass = fruitjuice(5,10);
+console.log(glass);
+
