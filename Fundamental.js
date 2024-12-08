@@ -208,14 +208,14 @@ while(j<10){
     console.log(j);
 }
 
-let k=0;
-while(k<10){
-    k++;
-    if(k==5){
-        return;
-    }
-    console.log(k);
-}
+// let k=0;
+// while(k<10){
+//     k++;
+//     if(k==5){
+//         return k;
+//     }
+//     console.log(k);
+// }
 
 
 //Functions 
@@ -253,3 +253,48 @@ function fruitjuice(apple,orange){
 let glass = fruitjuice(5,10);
 console.log(glass);
 
+
+//Array
+const colors = ["red","green","blue"];
+console.log(colors[0]);
+console.log(colors[1]);
+console.log(colors[2]);
+console.log(colors.length);
+colors.push("yellow");
+console.log(colors);
+colors.pop();
+console.log(colors);
+
+
+//Traversing an array
+for(let i=0;i<colors.length;i++){
+    console.log(colors[i]);
+}
+//array 
+const numbers1 = [1,2,3,4,5];
+for(let i=0;i<numbers1.length;i++){
+    console.log(numbers1[i]+numbers1[i]);
+}
+
+function hello(num){
+let stat=0;
+for(let i=2;i<num;i++){
+    if(num%i==0){
+        stat++;
+        break;
+    }
+}
+if(stat==0){
+    return " It is a prime number";
+}
+else{
+    return " It is not a prime number";
+}
+}
+
+const numbers = [1,2,3,4,5,6,7,8,9,10];
+for(let i=0;i<numbers.length;i++){
+    if(hello(numbers[i])==" It is a prime number"){
+    console.log(numbers[i]+" is prime numbers");
+    }
+}
