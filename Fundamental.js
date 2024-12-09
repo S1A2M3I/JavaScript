@@ -305,7 +305,7 @@ let rev = "";
 for(let i = num.length-1;i>=0;i--){
     rev = rev + num[i];
 }
-if(rev==num){
+if(rev==num){ 
     console.log("It is a palindrome");
 }
 else{
@@ -317,10 +317,18 @@ else{
 const numbers2 = [1,2,3,4,5,6,7,8,9,10];
 //map() The map() method is used for creating a new array from an existing one, applying a function to each one of the 
 //elements of the first array.
+//=> arrow function is used to define the function
+//num = accumulator
+//num = current value and num*num = square of current value 
 const square = numbers2.map((num) => num*num);
 console.log(square);
 //reduce() The reduce() method reduces an array of values down to just one value.
-const sum = numbers2.reduce((acc,num) => acc+num,0);
+const initialValue = 0;
+const sum = numbers2.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue);
+//acc = accumulator num = current value accumulator is used to store the result of the previous operation and current value is 
+//used to refer to the current element being processed.
 console.log(sum);
 //filter() The filter() method takes each element in an array and it applies a conditional statement against it. 
 const even = numbers2.filter((num) => num%2==0);
