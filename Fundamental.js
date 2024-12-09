@@ -315,6 +315,7 @@ else{
 
 //map(), reduce(), filter()
 const numbers2 = [1,2,3,4,5,6,7,8,9,10];
+
 //map() The map() method is used for creating a new array from an existing one, applying a function to each one of the 
 //elements of the first array.Map() is used traversing every element of the array.
 //=> arrow function is used to define the function
@@ -325,13 +326,114 @@ console.log(square);
 
 //reduce() The reduce() method reduces an array of values down to just one value.
 const initialValue = 0;
-const sum = numbers2.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,initialValue);
+const sum = numbers2.reduce((accumulator, currentValue) => accumulator + currentValue,initialValue);
 //acc = accumulator num = current value accumulator is used to store the result of the previous operation and current value is 
 //used to refer to the current element being processed.
+//initialValue = initial value of accumulator 
 console.log(sum);
 
 //filter() The filter() method takes each element in an array and it applies a conditional statement against it. 
 const even = numbers2.filter((num) => num%2==0);
 //num = current value and num%2==0 = check if the current value is even 
 console.log(even);
+
+//Object 
+const person1 = {
+    name: "John",
+    age: 30,
+    city: "New York"
+}
+console.log(person1.name);
+console.log(person1.age);
+console.log(person1.city);
+console.log(person1);
+
+//Classes
+class Person{
+    constructor(name,age,city){
+        this.name = name;
+        this.age = age;
+        this.city = city;
+    }
+    sayHello(){
+        console.log("Hello " + this.name);
+    }
+}
+const person3 = new Person("John",30,"New York");
+person3.sayHello();
+
+//JSON - JavaScript Object Notation Format is array of objects and string of objects and numbers of objects.
+const person4 = {
+    name: "John",
+    age: 30,
+    city: "New York"
+}
+const person5 = JSON.stringify(person4);
+console.log(person5);
+const person6 = JSON.parse(person5);
+console.log(person6);
+
+
+//DOM - Document Object Model
+//document is a global object in JavaScript that represents the entire HTML document. It provides access to all the elements
+//and properties of the document. The document object is the entry point for all JavaScript code that interacts with the HTML
+//document.
+//DOM Manipulation
+//get element by id
+const heading = document.getElementById("heading");
+console.log(heading);
+
+//get element by class name
+const paragraphs = document.getElementsByClassName("paragraph");
+console.log(paragraphs);
+
+//get element by tag name
+const links = document.getElementsByTagName("a");
+console.log(links);
+
+//get element by query selector
+const heading1 = document.querySelector("#heading");
+console.log(heading1);
+const paragraphs1 = document.querySelectorAll(".paragraph");
+console.log(paragraphs1);
+//queryselector
+//for tag name and class name it will return only the first element 
+// document.querySelector(".classname"); for class name 
+// document.querySelector("#idname"); for id name
+function hello(){
+let heading2 = document.getElementById("heading2");
+heading2.style.color = "red";
+}
+
+//Html Collections are arrays-like objects that represent collections of HTML elements.
+const heading3 = document.getElementsByTagName("h1");
+console.log(heading3);
+//NodeList is a collection of nodes in a document or HTML element. It is a collection of HTML elements.
+
+
+//for each loop
+// let allheading = document.getElementsByTagName("h1");
+// for(let heading of allheading){
+//     heading.style.color = "red";
+// }
+
+//DOM Traversal
+//get parent element
+// const parent = heading.parentNode;
+// console.log(parent);
+// //get child element
+// const child = heading.firstChild;
+// console.log(child);
+// //get next sibling el`ement
+// const nextSibling = heading.nextSibling;
+// console.log(nextSibling);
+// //get previous sibling element
+// const previousSibling = heading.previousSibling;
+// console.log(previousSibling);
+
+
+//JSON stringify and parse 
+//JSON.stringify() is used to convert a JavaScript object into a JSON string.
+//JSON.parse() is used to convert a JSON string into a JavaScript object.
+
+
