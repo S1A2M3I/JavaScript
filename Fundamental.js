@@ -400,10 +400,6 @@ console.log(paragraphs1);
 //for tag name and class name it will return only the first element 
 // document.querySelector(".classname"); for class name 
 // document.querySelector("#idname"); for id name
-function hello(){
-let heading2 = document.getElementById("heading2");
-heading2.style.color = "red";
-}
 
 //Html Collections are arrays-like objects that represent collections of HTML elements.
 const heading3 = document.getElementsByTagName("h1");
@@ -436,4 +432,16 @@ console.log(heading3);
 //JSON.stringify() is used to convert a JavaScript object into a JSON string.
 //JSON.parse() is used to convert a JSON string into a JavaScript object.
 
+//Events in JavaScript
+//onclick, onmouseover, onmouseout
+//onchange, onsubmit
+//onload
+//onkeydown, onkeyup, onkeypress
 
+//child element append and remove
+
+//add event listener
+const heading12 = document.getElementById("heading");
+heading12.addEventListener("click", () => {
+    alert("Hello World");
+});
